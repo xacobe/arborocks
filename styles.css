@@ -1,0 +1,310 @@
+:root {
+  --red: #A00000;
+}
+img {
+  max-width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'post_no_bills_regular';
+  src: url('fonts/postnobillscolombo-regular-webfont.eot');
+  src: url('fonts/postnobillscolombo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/postnobillscolombo-regular-webfont.woff2') format('woff2'),
+    url('fonts/postnobillscolombo-regular-webfont.woff') format('woff'),
+    url('fonts/postnobillscolombo-regular-webfont.ttf') format('truetype'),
+    url('fonts/postnobillscolombo-regular-webfont.svg#post_no_bills_colomboregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'post_no_bills_bold';
+  src: url('fonts/postnobillscolombo-bold-webfont.eot');
+  src: url('fonts/postnobillscolombo-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/postnobillscolombo-bold-webfont.woff2') format('woff2'),
+    url('fonts/postnobillscolombo-bold-webfont.woff') format('woff'),
+    url('fonts/postnobillscolombo-bold-webfont.ttf') format('truetype'),
+    url('fonts/postnobillscolombo-bold-webfont.svg#post_no_bills_colombobold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'post_no_bills_colomboXBd';
+  src: url('fonts/postnobillscolombo-extrabold-webfont.eot');
+  src: url('fonts/postnobillscolombo-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/postnobillscolombo-extrabold-webfont.woff2') format('woff2'),
+    url('fonts/postnobillscolombo-extrabold-webfont.woff') format('woff'),
+    url('fonts/postnobillscolombo-extrabold-webfont.ttf') format('truetype'),
+    url('fonts/postnobillscolombo-extrabold-webfont.svg#post_no_bills_colomboXBd') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+.ff-anton {font-family: anton;}
+.ff-post-regular {font-family: 'post_no_bills_regular';}
+.ff-post-bold {font-family: 'post_no_bills_bold';}
+.ff-post-extrabold {font-family: 'post_no_bills_colomboXBd';}
+.bg-main {
+  background-image: url("images/bg_noise-paper_center.png");
+  background-size: contain;
+}
+.bg-strips {
+  background: repeating-linear-gradient(45deg, var(--red), var(--red) .8rem, white .8rem, white 1.6rem);
+}
+.bg-papernoise { background-image: url("images/bg_some-noise.png");}
+.bg-papernoise--black { background-image: url("images/bg_some-noise--dark.png");}
+.container {
+  max-width: calc(1080px + 4rem);
+  margin-inline: auto;
+  padding-inline: 4rem;
+}
+.w-100 { width: 100%;}
+.vh-100 { height: 100dvh;}
+.mx-auto {margin-inline: auto;}
+.flex {display: flex;}
+.flex-col {flex-direction: column;}
+.section-title--wrapper  {
+  position: relative;
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  font-family: anton;
+  -webkit-text-stroke: 2px black;
+  color: white;
+  z-index: 0;
+  mix-blend-mode: darken;
+  background: url(images/partiture--long.png) no-repeat 100% 0, url(images/partiture--long.png) no-repeat 0 8rem;
+  background-size: calc(100% - 16rem);
+  padding-block-end: 4rem;
+  margin-block-end: 1rem;
+
+  svg {
+    margin-top: -4.8rem;
+    padding-left: 1rem;
+  }
+}
+.section-title {
+  width: max-content;
+
+  &::before {
+    content: attr(title);
+    color: white;
+    position: absolute;
+    top: 0;
+    text-shadow: 1rem 1rem 1px #6f1d1d;
+  }
+  &::after {
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    text-shadow: 1rem 1rem 1px #00000052;
+    mix-blend-mode: multiply;
+  }
+}
+.section-agenda__header {
+
+}
+/* The animation code */
+@keyframes carousel_animation {
+  from {
+    transform: translateX(-50dvw);
+  }
+
+  to {
+    transform: translateX(35dvw);
+  }
+}
+.carousel-animation {
+  display: flex;
+  position: relative;
+  animation: carousel_animation 45s infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-play-state: running;
+}
+.animation-reverse {
+  animation-direction: reverse;
+}
+.carousel__title {
+  font-size: 3rem;
+  font-family: anton;
+  padding-left: 4rem;
+  line-height: 0.8;
+  margin-bottom: 2rem;
+}
+.bg-strip-noise--black {
+  background-image: url("images/bg_some-noise--dark.png");
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1rem;
+    background: repeating-linear-gradient(45deg, var(--red), var(--red) .8rem, white .8rem, white 1.6rem);
+    position: absolute;
+  }
+  &:before { top: -1.5rem;}
+  &:after { bottom: -1.5rem;}
+}
+.section-agenda__day {
+  li {
+    display: flex;
+    border-bottom: dashed 2px;
+    padding-block: 0.6rem;
+  }
+}
+.header {
+  display: grid;
+  grid-template-columns: 75% 20%;
+  padding-top: 1rem;
+}
+.logo {
+  align-items: flex-end;
+  width: 36rem;
+  mix-blend-mode: darken;
+}
+.header__sidebar {
+  display: flex;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    height: 200%;
+    width: 5rem;
+    background-image: url(images/deco-square.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: 0 0;
+    right: -6rem;
+  }
+  &::after {
+    content: "";
+      display: block;
+      height: 130%;
+      width: 7.2rem;
+      background: url(images/sello.png) top left;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+}
+.date-stamp {
+    width: 14rem;
+    text-align: right;
+    font-family: 'post_no_bills_colomboXBd';
+    font-size: 4.8rem;
+    text-transform: uppercase;
+
+  .date-stamp__day {
+    line-height: .7 ;
+  }
+  .date-stamp__month {
+    line-height: 1.4;
+  }
+}
+.main-menu {
+  position: relative;
+  font-size: 2.8rem;
+  font-family: 'post_no_bills_colomboXBd';
+  text-transform: uppercase;
+  margin-block: 2rem;
+  text-decoration: underline;
+  padding-block-start: 0.2rem;
+  padding-block-end: 0.6rem;
+
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 0.8rem;
+    background-image: url(images/img-lg-horiz-border.png);
+    display: block;
+    position: absolute;
+  }
+  &::before { top: 0;}
+  &::after { bottom: 0;}
+
+  a:hover {
+    color: var(--red);
+  }
+}
+.btn {
+  color: white;
+  text-transform: uppercase;
+  padding: .8rem 2rem;
+  width: max-content;
+}
+.btn-xl {
+  font-size: 2rem;
+}
+.btn-primary {
+  background-color: var(--red);
+  position: relative;
+
+  &:hover {
+    background-color: red;
+  }
+}
+
+@keyframes lampring {
+/* from { background-position-y: 0;}
+  to { background-position-y: 200dvh;} */
+from { transform: translate(0, 0);}
+  to { transform: translate(0, -200dvh);}
+}
+.deco-lamprea-left,
+.deco-lamprea-right {
+  position:relative;
+  clip-path: margin-box;
+}
+
+.deco-lamprea-left::after,
+.deco-lamprea-right::after {
+  will-change: transform;
+  content: "";
+  display: block;
+  height: 300dvh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(images/lamprea.png);
+  width: 100%;
+  mix-blend-mode: hard-light;
+  background-size: contain;
+  background-repeat: repeat-y;
+  background-position: center;
+  animation: lampring linear;
+  animation-timeline: scroll();
+  animation-range: entry;
+  /*** animation-range-start: 50px;
+  animation-range-end: 66dvh; ***/
+}
+
+.deco-lamprea-left {
+  flex: 1 1 33%;
+  transform: rotate(180deg);
+}
+.section-tickets__content {
+  flex: 1 1 66%;
+}
+.deco-lamprea-right {
+  flex: 1 1 33%;
+}
+
+
+/* Fonts */
+.stardos-stencil-regular {
+  font-family: "Stardos Stencil", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.stardos-stencil-bold {
+  font-family: "Stardos Stencil", serif;
+  font-weight: 700;
+  font-style: normal;
+}

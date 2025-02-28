@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="stylesheet.css" type="text/css"
+    charset="utf-8" />
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" media="all" href="js/lite-youtube/lite-yt-embed.css">
+  <script type="module" src="js/lite-youtube/lite-yt-embed.js"></script>
+  <link rel="stylesheet" media="all" href="styles.css">
+  <title>ArboRock 2025</title>
+</head>
+
+<body class="">
+  <div class="bg-main">
+    <header class="header container">
+      <!-- <h1 class="page-tile visually-hidden">ArboRock</h1> -->
+      <picture class= "logo">
+        <source srcset="images/logo.jpg" media="(min-width: 720px)" />
+        <img src="images/logo--mobil.png" alt="Logotipo">
+      </picture>
+      <div class="header__sidebar">
+        <div class="date-stamp text-8xl">
+          <div class="date-stamp__day">
+            26
+          </div>
+          <div class="date-stamp__day">
+            27
+          </div>
+          <div class="date-stamp__month">Xullo</div>
+        </div>
+      </div>
+      <nav class="main-menu w-max">
+        <ul class="flex gap-3">
+          <li><a href="#entradas">Entradas</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#acampada">Acampada</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="entradas" class="section-tickets container flex gap-8">
+        <div class="deco-lamprea-left"></div>
+        <div class="section-tickets__content flex flex-col items-center">
+          <div class="ticket-image flex flex-col items-center">
+            <img class="invert" src="images/ticket.png" alt="ilustración de un ticket">
+            <h3 class="ff-anton text-4xl uppercase my-3">Entradas Adelantadas</h3>
+          </div>
+          <p>
+          </p>
+          <div class="text-3xl ff-anton text-red-700">1 día 20€ ó 2 días 30€</div>
+          <b class="bg-white w-max"> + gastos xestión.</b>
+          <div class="entrada-online-places">
+            <h3 class="strong text-3xl ff-anton">Puntos de venta anticipada</h3> <a
+              href="https://www.woutick.com"
+              class="text-red-700 ff-anton text-xl">www.woutick.com</a> <a
+              href="https://www.arborock.com"
+              class="text-red-700 ff-anton text-xl">www.arborock.com</a>
+          </div>
+          <div class="entradas-fisical-places uppercase mb-8 bg-white p-4">
+            <strong class="ff-anton text-lg">Arbo</strong>
+            <span class="uppercase text-bold text-xl">Bar A Esmorga - Librería Caprichos - Librería Arco Iris</span>
+            <strong class="ff-anton text-lg">Ponteareas</strong>
+            <span class="uppercase text-bold text-xl">Ovella Negra</span>
+            <strong class="ff-anton text-lg">Vigo</strong>
+            <span class="uppercase text-bold text-xl">Bar Princesa</span>
+            <strong class="ff-anton text-lg">Salvaterra</strong>
+            <span class="uppercase text-bold text-xl">Taller Mingos Peugeot</span>
+            <strong class="ff-anton text-lg">Porriño</strong>
+            <span class="uppercase text-bold text-xl">Yago Fernández Tatoo</span>
+            <strong class="ff-anton text-lg">Ourense</strong>
+            <span class="uppercase text-bold text-xl">Bar Vagalume</span>
+            <strong class="ff-anton text-lg">A Cañiza</strong>
+            <span class="uppercase text-bold text-xl">Rest. Casa Eligio</span>
+          </div>
+          <a href="/" class="btn btn-primary btn-xl ff-anton mx-auto">Comprar</a>
+        </div>
+        <div class="deco-lamprea-right"></div>
+      </section>
+      <section id="carousel-bandas" class="section-bands flex flex-col mt-8 py-8 -rotate-2 mb-10 overflow-hidden">
+        <h2 class="carousel__title">Bandas</h2>
+        <div class="bg-strip-noise--black">
+          <div class="carousel carousel-animation carousel-top flex gap-6 py-3 justify-center items-center">
+            <img src="images/bands/dakikarria-title.png" alt="">
+            <img src="images/bands/pig-title.png" alt="">
+            <img src="images/bands/elefant-title.png" alt="">
+            <img src="images/bands/kaos-title.png" alt="">
+            <img src="images/bands/rebelion-title.png" alt="">
+            <img src="images/bands/dakikarria-title.png" alt="">
+            <img src="images/bands/kaos-title.png" alt="">
+          </div>
+          <div class="carousel carousel-animation animation-reverse carousel-top flex gap-6 py-3 justify-center items-center">
+            <img src="images/bands/kaos-title.png" alt="">
+            <img src="images/bands/dakikarria-title.png" alt="">
+            <img src="images/bands/rebelion-title.png" alt="">
+            <img src="images/bands/pig-title.png" alt="">
+            <img src="images/bands/kaos-title.png" alt="">
+            <img src="images/bands/elefant-title.png" alt="">
+            <img src="images/bands/dakikarria-title.png" alt="">
+          </div>
+        </div>
+      </section>
+      <section id="acampada" class="section-acampada  w-full lg:w-5xl mx-auto">
+        <img
+          src="images/acampada.png"
+          alt="Ilustración antigua de una acampada."
+          class="grayscale hover:grayscale-0 transition delay-150 transition-filter"
+        >
+      </section>
+      <section id="agenda" class="section-agenda flex flex-col container">
+        <div class="section-title--wrapper">
+          <h2 class="section-title" title="Agenda">
+            Agenda
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 128"
+            preserveAspectRatio="xMidYMid meet" style="
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            ">
+            <path fill="#AE0404" d="M.5 24 401.5.5 440 128H.5V24Z"
+              style="mix-blend-mode:multiply;"></path>
+          </svg>
+          </h2>
+        </div>
+        <article class="section-agenda__day ff-post-extrabold text-5xl uppercase mb-8 gap-8 w-full sm:w-xl mx-auto">
+          <h3 class="section-agenda__header bg-black text-white text-center flex-none text-5xl mb-4 max-w-max mx-auto mb-12">Viernes 26</h3>
+          <ul>
+            <li>
+              <span class="text-red-700" datetime="20:00">20:00</span>
+              <details class="w-full px-8">
+                <summary class="text-center w-full text-4xl">Apertura de portas</summary>
+                <p class="text-base">Entrada abierta a partir de mediodía. Menos acompañados entran gratis.</p>
+              </details>
+            </li>
+            <li>
+              <span class="text-red-700" datetime="21:00">21:00</span>
+              <details class="w-full px-8">
+                <summary class="text-center w-full text-4xl">Pigs Parlaments</summary>
+                <p class="text-base">Directamente desde Rusia, Pigs Parlaments llevan el estandarte del punk folk
+                combativo. Sus melodías con acordeón y sus letras satíricas convierten cada
+                concierto en una fiesta cargada de mensaje y reivindicación.</p>
+                <lite-youtube
+                  videoid="qmPXp5dF9h0"
+                  style="background-image: url('https://i.ytimg.com/vi/qmPXp5dF9h0/hqdefault.jpg');">
+                  <a
+                    href="https://www.youtube.com/watch?v=qmPXp5dF9h0" class="lyt-playbtn"
+                    title="Reproducir Video">
+                    <span class="lyt-visually-hidden">
+                      Reproducir Video: Crayon Physics Deluxe - Trailer HD
+                    </span>
+                  </a>
+                </lite-youtube>
+              </details>
+            </li>
+            <li>
+              <span class="text-red-700" datetime="22:30">22:30</span>
+              <details class="w-full px-8">
+                <summary class="text-center w-full text-4xl">Dakikarria</summary>
+                <p class="text-base">Galicia. Dakidarría fusiona ska, reggae, punk-rock y
+                ritmos urbanos. Con más de 20 años de trayectoria, destacan por sus enérgicos
+                directos y letras comprometidas que incorporan hasta doce idiomas diferentes.</p>
+                <lite-youtube videoid="ZngKOuwbDzs"
+                  style="background-image: url('https://i.ytimg.com/vi/ZngKOuwbDzs/hqdefault.jpg');">
+                  <a href="https://www.youtube.com/watch?v=ZngKOuwbDzs" class="lyt-playbtn"
+                    title="Reproducir Video">
+                    <span class="lyt-visually-hidden">
+                      Reproducir Video: DAKIDARRÍA "Terra" - Videoclip oficial
+                    </span>
+                  </a>
+                </lite-youtube>
+              </details>
+            </li>
+            <li>
+              <span class="text-red-700" datetime="00:30">00:30</span>
+              <details class="w-full px-8">
+                <summary class="text-center w-full text-4xl">Talco</summary>
+                <p class="text-base">Venecia, Italia. Talco es una banda que combina punk-rock con
+                influencias de ska y folklore italiano. Formados en 2001, se caracterizan por su
+                compromiso político y letras que abordan temas como el imperialismo, racismo y
+                fascismo.</p>
+                <lite-youtube videoid="3SgcaZCLJFk"
+                  style="background-image: url('https://i.ytimg.com/vi/3SgcaZCLJFk/hqdefault.jpg');">
+                  <a href="https://www.youtube.com/watch?v=3SgcaZCLJFk" class="lyt-playbtn"
+                    title="Reproducir Video">
+                    <span class="lyt-visually-hidden">
+                      Reproducir Video: TALCO "Danza dell'Autunno Rosa" (Official video)
+                    </span>
+                  </a>
+                </lite-youtube>
+              </details>
+            </li>
+            <li>
+              <span class="text-red-700" datetime="02:30">02:30</span>
+              <details class="w-full px-8">
+                <summary class="text-center w-full text-4xl">Abaixo cu sistema</summary>
+                <p class="text-base">Banda tributo a System of a Down</p>
+                <lite-youtube videoid="8p32_qVtfh8"
+                  style="background-image: url('https://i.ytimg.com/vi/8p32_qVtfh8/hqdefault.jpg');">
+                  <a href="https://www.youtube.com/watch?v=8p32_qVtfh8" class="lyt-playbtn"
+                    title="Reproducir Video">
+                    <span class="lyt-visually-hidden">
+                      Reproducir Video: Abaixo cu sistema - B.Y.O.B. (Tributo a System of a Down)
+                    </span>
+                  </a>
+                </lite-youtube>
+              </details>
+            </li>
+            <li>
+              <span class="text-red-700" datetime="04:30">04:30</span>
+              <div class="w-full px-8">
+                <p class="text-center w-full text-4xl">Fin del Festival</p>
+              </div>
+            </li>
+          </ul>
+        </article>
+        <article class="section-agenda__day ff-post-extrabold text-5xl uppercase mb-8 gap-8 w-full sm:w-xl mx-auto">
+          <h3 class="section-agenda__header bg-black text-white text-center flex-none text-5xl mb-4 max-w-max mx-auto mb-12">Sábado 27</h3>
+          <ul>
+            <li><span class="text-red-700" datetime="19:30">19:30</span>
+                <p class="text-center w-full text-4xl">Apertura de portas</p>
+            </li>
+            <li>
+              <span class="text-red-700" datetime="20:00">20:00</span>
+              <details class="w-full px-8">
+                <summary class="text-center w-full text-4xl">Elephants and Paw</summary>
+                <p class="text-base">Galicia. Esta joven banda fusiona ska, reggae y punk con ritmos bailables
+                y letras comprometidas.</p>
+                <lite-youtube videoid="pO6pNQLd-8M"
+                  style="background-image: url('https://i.ytimg.com/vi/pO6pNQLd-8M/hqdefault.jpg');">
+                  <a href="https://www.youtube.com/watch?v=pO6pNQLd-8M" class="lyt-playbtn"
+                    title="Reproducir Video">
+                    <span class="lyt-visually-hidden">
+                      Reproducir Video: Exame - High Paw e Elephants Yard
+                    </span>
+                  </a>
+                </lite-youtube>
+              </details>
+            </li>
+            <li>
+              <span class="text-red-700" datetime="21:45">21:45</span>
+              <details class="w-full px-8">
+                <summary class="text-center w-full text-4xl">Rebelión do inframundo</summary>
+                <p class="text-base">Hip-hop combativo desde Ourense con bases potentes y letras afiladas que
+                denuncian las injusticias sociales. Su directo se caracteriza por la intensidad
+                y la conexión con el público.</p>
+                <lite-youtube videoid="RhOYGtbcdKk"
+                  style="background-image: url('https://i.ytimg.com/vi/RhOYGtbcdKk/hqdefault.jpg');">
+                  <a href="https://www.youtube.com/watch?v=RhOYGtbcdKk" class="lyt-playbtn"
+                    title="Reproducir Video">
+                    <span class="lyt-visually-hidden">
+                      Reproducir Video: Rebeliom do Inframundo x Fillas de Cassandra - Contra vento e marea (Videoclip
+                      oficial)
+                    </span>
+                  </a>
+                </lite-youtube>
+              </details>
+            </li>
+            <li>
+              <span class="text-red-700" datetime="23:30">23:30</span>
+              <details class="w-full px-8">
+                <summary class="text-center w-full text-4xl">Koma</summary>
+                <p class="text-base">Desde Navarra, una de las bandas más icónicas del metal punk estatal. Letras
+                cargadas de ironía y crítica social, con una potente base de guitarras y una voz
+                inconfundible que los ha convertido en una referencia de la música contundente.</p>
+                <lite-youtube videoid="jt7C1JysZFw"
+                  style="background-image: url('https://i.ytimg.com/vi/jt7C1JysZFw/hqdefault.jpg');">
+                  <a href="https://www.youtube.com/watch?v=jt7C1JysZFw" class="lyt-playbtn"
+                    title="Reproducir Video">
+                    <span class="lyt-visually-hidden">
+                      Reproducir Video: KOMA -" La Almohada Cervical" videoclip oficial (La Maldición Divina)
+                    </span>
+                  </a>
+                </lite-youtube>
+              </details>
+            </li>
+            <li>
+              <span class="text-red-700" datetime="01:30">01:30</span>
+              <details class="w-full px-8">
+                <summary class="text-center w-full text-4xl">Kaos Urbano</summary>
+                <p class="text-base">Punk oi! desde Madrid con más de dos décadas sobre los escenarios. Letras
+                combativas, actitud obrera y un directo que combina rabia y sentimiento,
+                convirtiéndolos en una de las bandas más respetadas del género.</p>
+                <lite-youtube videoid="_DVl1aLwkCM"
+                  style="background-image: url('https://i.ytimg.com/vi/_DVl1aLwkCM/hqdefault.jpg');">
+                  <a href="https://www.youtube.com/watch?v=_DVl1aLwkCM" class="lyt-playbtn"
+                    title="Reproducir Video">
+                    <span class="lyt-visually-hidden">
+                      Reproducir Video: Kaos Urbano "Ante la muerte" (Videoclip)
+                    </span>
+                  </a>
+                </lite-youtube>
+              </details>
+            </li>
+            <li>
+              <span class="text-red-700" datetime="04:30">04:30</span>
+              <details class="w-full px-8">
+                <summary class="text-center w-full text-4xl">Fin del Festival</summary>
+                <p class="text-base">Entrada abierta a partir de mediodía. Menos acompañados entran gratis.</p>
+              </details>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section id="carousel-sponsors" class="section-sponsors flex flex-col mt-8 py-8 overflow-hidden rotate-2 mb-10">
+        <h2 class="carousel__title">Colaboradores</h2>
+        <div class="carousel carousel-top bg-strip-noise--black flex gap-6 py-3 justify-center items-center">
+          <img src="images/patrocinadores/deputacion_pontevedra.png" class="bg-white p-1" alt="">
+          <img src="images/patrocinadores/gadis.png" class="bg-white p-1" alt="">
+          <img src="images/patrocinadores/pirucho.png" class="bg-white p-1" alt="">
+          <img src="images/patrocinadores/xacobenet.jpg" width="200" class="bg-white p-1" alt="">
+          <img src="images/patrocinadores/rodasa.png" class="bg-white p-1" alt="">
+          <img src="images/patrocinadores/sisvenpvc.png" class="bg-white p-1" alt="">
+          <img src="images/patrocinadores/xirela.png" class="bg-white p-1" alt="">
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+            www.arborock.com - 2014 - <span id="current-year"></span>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
