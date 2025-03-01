@@ -70,7 +70,6 @@ img {
   font-size: 4.8rem;
   text-transform: uppercase;
   font-family: anton;
-  -webkit-text-stroke: 2px black;
   color: white;
   z-index: 0;
   mix-blend-mode: darken;
@@ -85,7 +84,6 @@ img {
 
   svg {
     margin-top: -4.8rem;
-    padding-left: 1rem;
   }
 }
 .section-title {
@@ -96,7 +94,7 @@ img {
     color: white;
     position: absolute;
     top: 0;
-    text-shadow: 1rem 1rem 1px #6f1d1d;
+    text-shadow: -0.6rem -0.7rem 1px #6f1d1d;
   }
   &::after {
     content: attr(title);
@@ -106,8 +104,30 @@ img {
     mix-blend-mode: multiply;
   }
 }
-.section-agenda__header {
+.section-agenda__day {
+  details {
+    position: relative;
 
+    &[open] summary::after {
+      content: "-";
+      padding-inline: 1rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+ summary {
+    list-style: none;
+    &::after {
+      content: "+";
+      padding-inline: 1rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+ }
 }
 lite-youtube {
   margin-block-start: 1rem;
@@ -194,13 +214,15 @@ lite-youtube {
     &::before {
         content: "";
         display: block;
-        height: 200%;
-        width: 5rem;
+        height: 100%;
+        width: 4rem;
         background-image: url(images/deco-square.png);
         background-repeat: no-repeat;
         position: absolute;
         background-position: 0 0;
-        right: -6rem;
+        right: -5rem;
+        background-size: 100%;
+        top: 3rem
       }
   }
 }
