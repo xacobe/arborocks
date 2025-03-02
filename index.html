@@ -14,6 +14,9 @@
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" media="all" href="js/lite-youtube/lite-yt-embed.css">
   <script type="module" src="js/lite-youtube/lite-yt-embed.js"></script>
+  <script type="module" src="js/splide/splide.min.js"></script>
+  <script type="module" src="js/splide/splide-extension-auto-scroll.min.js"></script>
+  <link rel="stylesheet" media="all" href="js/splide/splide-core.min.css">
   <link rel="stylesheet" media="all" href="styles.css">
   <title>ArboRock 2025</title>
 </head>
@@ -22,23 +25,20 @@
   <div class="bg-main">
     <header class="header container">
       <!-- <h1 class="page-tile visually-hidden">ArboRock</h1> -->
-      <picture class= "logo">
+      <picture class= "logo ms-4">
         <source srcset="images/logo.jpg" media="(min-width: 720px)" />
         <img src="images/logo--mobil.png" alt="Logotipo">
       </picture>
       <div class="header__sidebar">
         <div class="date-stamp">
-          <div class="date-stamp__day">
-            26
-          </div>
-          <div class="date-stamp__day">
-            27
-          </div>
+          <div class="date-stamp__day">26</div>
+          <div class="date-stamp__day">27</div>
           <div class="date-stamp__month">Xullo</div>
+          <div class="date-stamp__year">2024</div>
         </div>
       </div>
-      <nav class="main-menu w-max">
-        <ul class="flex gap-3">
+      <nav class="main-menu sm:w-max">
+        <ul class="flex gap-3 justify-center sm:justify-start">
           <li><a href="#entradas">Entradas</a></li>
           <li><a href="#agenda">Agenda</a></li>
           <li><a href="#acampada">Acampada</a></li>
@@ -84,37 +84,67 @@
         </div>
         <div class="deco-lamprea-right"></div>
       </section>
-      <section id="carousel-bandas" class="section-bands flex flex-col mt-8 py-8 -rotate-2 mb-10 overflow-hidden">
+      <section id="carousel-bandas"
+        class="section-bands flex flex-col mt-8 py-8 -rotate-2 mb-10 overflow-hidden">
         <h2 class="carousel__title">Bandas</h2>
         <div class="bg-strip-noise--black">
-          <div class="carousel carousel-animation carousel-top flex gap-6 py-3 justify-center items-center">
-            <img src="images/bands/dakikarria-title.png" alt="">
-            <img src="images/bands/pig-title.png" alt="">
-            <img src="images/bands/elefant-title.png" alt="">
-            <img src="images/bands/kaos-title.png" alt="">
-            <img src="images/bands/rebelion-title.png" alt="">
-            <img src="images/bands/dakikarria-title.png" alt="">
-            <img src="images/bands/kaos-title.png" alt="">
+          <div
+            class="splide splide-bands-top carousel-top flex gap-6 py-3 justify-center items-center">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide"><img src="images/bands/dakikarria-title.png"
+                    alt=""></li>
+                <li class="splide__slide"><img src="images/bands/pig-title.png"
+                    alt=""></li>
+                <li class="splide__slide"><img src="images/bands/elefant-title.png"
+                    alt=""></li>
+                <li class="splide__slide"><img src="images/bands/kaos-title.png"
+                    alt=""></li>
+                <li class="splide__slide"><img src="images/bands/rebelion-title.png"
+                    alt=""></li>
+                <li class="splide__slide"><img src="images/bands/dakikarria-title.png"
+                    alt=""></li>
+                <li class="splide__slide"><img src="images/bands/kaos-title.png"
+                    alt=""></li>
+              </ul>
+            </div>
           </div>
-          <div class="carousel carousel-animation animation-reverse carousel-top flex gap-6 py-3 justify-center items-center">
-            <img src="images/bands/kaos-title.png" alt="">
-            <img src="images/bands/dakikarria-title.png" alt="">
-            <img src="images/bands/rebelion-title.png" alt="">
-            <img src="images/bands/pig-title.png" alt="">
-            <img src="images/bands/kaos-title.png" alt="">
-            <img src="images/bands/elefant-title.png" alt="">
-            <img src="images/bands/dakikarria-title.png" alt="">
+          <div
+            class="splide splide-bands-bottom carousel-top flex gap-6 py-3 justify-center items-center">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide"><img src="images/bands/dakikarria-title.png"
+                    alt=""></li>
+                <li class="splide__slide"><img src="images/bands/pig-title.png"
+                    alt=""></li>
+                <li class="splide__slide"><img src="images/bands/elefant-title.png"
+                    alt=""></li>
+                <li class="splide__slide"><img src="images/bands/kaos-title.png"
+                    alt=""></li>
+                <li class="splide__slide"><img src="images/bands/rebelion-title.png"
+                    alt=""></li>
+                <li class="splide__slide"><img src="images/bands/dakikarria-title.png"
+                    alt=""></li>
+                <li class="splide__slide"><img src="images/bands/kaos-title.png"
+                    alt=""></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
-      <section id="acampada" class="section-acampada  w-full lg:w-5xl mx-auto">
+      <section id="acampada" class="section-acampada relative w-full lg:w-5xl mx-auto bg-papernoise--black bg-fixed">
         <img
           src="images/acampada.png"
           alt="Ilustración antigua de una acampada."
-          class="grayscale hover:grayscale-0 transition delay-150 transition-filter"
+          class="to-color-animation"
         >
+        <div class="flex bottom-0 left-0 right-0 w-2xl mx-auto items-center py-8 mb-32">
+          <span class="ff-anton text-white text-5xl uppercase">Acampada</span>
+          <a href="/" class="btn btn-primary btn-xl ff-anton mx-auto">Ver localización</a>
+          <span class="ff-anton text-5xl text-white uppercase">de balde</span>
+        </div>
       </section>
-      <section id="agenda" class="section-agenda flex flex-col container">
+      <section id="agenda" class="section-agenda flex flex-row flex-wrap container gap-x-8 justify-around">
         <div class="section-title--wrapper">
           <h2 class="section-title" title="Agenda">
             Agenda
@@ -129,16 +159,19 @@
           </svg>
           </h2>
         </div>
-        <article class="section-agenda__day ff-post-extrabold text-5xl mb-8 gap-8 w-full sm:w-xl mx-auto">
-          <h3 class="section-agenda__header bg-black text-white text-center flex-none text-5xl mb-4 max-w-max mx-auto mb-12">Viernes 26</h3>
+        <article class="section-agenda__day ff-post-extrabold text-5xl gap-8">
+          <h3 class="section-agenda__header bg-black text-white text-center flex-none text-5xl max-w-max mx-auto">Viernes 26</h3>
           <ul>
-            <li><span class="text-red-700 px-4 sm:px-2" datetime="19:30">19:30</span>
-              <p class="text-center w-full text-4xl">Apertura de portas</p>
+            <li class="flex justify-self-center">
+              <span class="text-red-700 px-4 sm:px-2 text-red-700 px-4 sm:px-2 text-4xl " datetime="19:30">19:30</span>
+              <p class="text-center w-full text-3xl">Apertura de portas</p>
             </li>
             <li>
-              <span class="text-red-700 px-4 sm:px-2" datetime="21:00">21:00</span>
               <details class="w-full cursor-pointer">
-                <summary class="text-center w-full text-4xl hover:text-red-700 uppercase">Pigs Parlaments</summary>
+                <summary class="flex text-center w-full text-4xl hover:text-red-700 uppercase items-center">
+                  <span class="text-5xl text-red-700 px-4 sm:px-2" datetime="21:00">21:00</span>
+                  <span class="ps-2 pe-10">Pigs Parlaments</span>
+                </summary>
                 <lite-youtube
                 videoid="qmPXp5dF9h0"
                 style="background-image: url('https://i.ytimg.com/vi/qmPXp5dF9h0/hqdefault.jpg');">
@@ -150,15 +183,17 @@
                 </span>
               </a>
             </lite-youtube>
-            <p class="text-base font-sans bg-white py-4">Directamente desde Rusia, Pigs Parlaments llevan el estandarte del punk folk
+            <p class="text-base font-sans bg-white py-4 w-sm">Directamente desde Rusia, Pigs Parlaments llevan el estandarte del punk folk
             combativo. Sus melodías con acordeón y sus letras satíricas convierten cada
             concierto en una fiesta cargada de mensaje y reivindicación.</p>
               </details>
             </li>
             <li>
-              <span class="text-red-700 px-4 sm:px-2" datetime="22:30">22:30</span>
               <details class="w-full cursor-pointer">
-                <summary class="text-center w-full text-4xl hover:text-red-700 uppercase">Dakikarria</summary>
+                <summary class="flex text-center w-full text-4xl hover:text-red-700 uppercase items-center">
+                  <span class="text-5xl text-red-700 px-4 sm:px-2" datetime="22:30">22:30</span>
+                  <span class="ps-2 pe-10">Dakikarria</span>
+                </summary>
                 <lite-youtube videoid="ZngKOuwbDzs"
                 style="background-image: url('https://i.ytimg.com/vi/ZngKOuwbDzs/hqdefault.jpg');">
                 <a href="https://www.youtube.com/watch?v=ZngKOuwbDzs" class="lyt-playbtn"
@@ -168,15 +203,17 @@
                 </span>
               </a>
             </lite-youtube>
-            <p class="text-base font-sans bg-white py-4">Galicia. Dakidarría fusiona ska, reggae, punk-rock y
+            <p class="text-base font-sans bg-white py-4 w-sm">Galicia. Dakidarría fusiona ska, reggae, punk-rock y
             ritmos urbanos. Con más de 20 años de trayectoria, destacan por sus enérgicos
             directos y letras comprometidas que incorporan hasta doce idiomas diferentes.</p>
               </details>
             </li>
             <li>
-              <span class="text-red-700 px-4 sm:px-2" datetime="00:30">00:30</span>
               <details class="w-full cursor-pointer">
-                <summary class="text-center w-full text-4xl hover:text-red-700 uppercase">Talco</summary>
+                <summary class="flex text-center w-full text-4xl hover:text-red-700 uppercase items-center">
+                  <span class="text-5xl text-red-700 px-4 sm:px-2" datetime="00:30">00:30</span>
+                  <span class="ps-2 pe-10">Talco</span>
+                </summary>
                 <lite-youtube videoid="3SgcaZCLJFk"
                 style="background-image: url('https://i.ytimg.com/vi/3SgcaZCLJFk/hqdefault.jpg');">
                 <a href="https://www.youtube.com/watch?v=3SgcaZCLJFk" class="lyt-playbtn"
@@ -186,16 +223,18 @@
                 </span>
               </a>
             </lite-youtube>
-            <p class="text-base font-sans bg-white py-4">Venecia, Italia. Talco es una banda que combina punk-rock con
+            <p class="text-base font-sans bg-white py-4 w-sm">Venecia, Italia. Talco es una banda que combina punk-rock con
             influencias de ska y folklore italiano. Formados en 2001, se caracterizan por su
             compromiso político y letras que abordan temas como el imperialismo, racismo y
             fascismo.</p>
               </details>
             </li>
             <li>
-              <span class="text-red-700 px-4 sm:px-2" datetime="02:30">02:30</span>
               <details class="w-full cursor-pointer">
-                <summary class="text-center w-full text-4xl hover:text-red-700 uppercase">Abaixo cu sistema</summary>
+                <summary class="flex text-center w-full text-4xl hover:text-red-700 uppercase items-center">
+                  <span class="text-5xl text-red-700 px-4 sm:px-2" datetime="02:30">02:30</span>
+                  <span class="ps-2 pe-10">Abaixo cu sistema</span>
+                </summary>
                 <lite-youtube videoid="8p32_qVtfh8"
                 style="background-image: url('https://i.ytimg.com/vi/8p32_qVtfh8/hqdefault.jpg');">
                 <a href="https://www.youtube.com/watch?v=8p32_qVtfh8" class="lyt-playbtn"
@@ -205,27 +244,28 @@
                 </span>
               </a>
             </lite-youtube>
-            <p class="text-base font-sans bg-white py-4">Banda tributo a System of a Down</p>
+            <p class="text-base font-sans bg-white py-4 w-sm">Banda tributo a System of a Down</p>
               </details>
             </li>
-            <li>
-              <span class="text-red-700 px-4 sm:px-2" datetime="04:30">04:30</span>
-              <div class="w-full px-8">
-                <p class="text-center w-full text-4xl">Fin del Festival</p>
-              </div>
+            <li class="flex justify-self-center">
+                <span class="text-red-700 px-4 sm:px-2 text-red-700 px-4 sm:px-2 text-4xl" datetime="04:30">04:30</span>
+                <p class="text-center w-full text-3xl">Fin del Festival</p>
             </li>
           </ul>
         </article>
-        <article class="section-agenda__day ff-post-extrabold text-5xl mb-8 gap-8 w-full sm:w-xl mx-auto">
-          <h3 class="section-agenda__header bg-black text-white text-center flex-none text-5xl mb-4 max-w-max mx-auto mb-12">Sábado 27</h3>
+        <article class="section-agenda__day ff-post-extrabold text-5xl gap-8">
+          <h3 class="section-agenda__header bg-black text-white text-center flex-none text-5xl max-w-max mx-auto">Sábado 27</h3>
           <ul>
-            <li><span class="text-red-700 px-4 sm:px-2" datetime="19:30">19:30</span>
-                <p class="text-center w-full text-4xl">Apertura de portas</p>
+            <li class="flex justify-self-center">
+              <span class="text-red-700 px-4 sm:px-2 text-red-700 px-4 sm:px-2 text-4xl " datetime="19:30">19:30</span>
+                <p class="text-center w-full text-3xl">Apertura de portas</p>
             </li>
             <li>
-              <span class="text-red-700 px-4 sm:px-2" datetime="20:00">20:00</span>
               <details class="w-full cursor-pointer">
-                <summary class="text-center w-full text-4xl hover:text-red-700 uppercase">Elephants and Paw</summary>
+                <summary class="flex text-center w-full text-4xl hover:text-red-700 uppercase items-center">
+                  <span class="text-5xl text-red-700 px-4 sm:px-2" datetime="20:00">20:00</span>
+                  <span class="ps-2 pe-10">Elephants and Paw</span>
+                </summary>
                 <lite-youtube videoid="pO6pNQLd-8M"
                 style="background-image: url('https://i.ytimg.com/vi/pO6pNQLd-8M/hqdefault.jpg');">
                 <a href="https://www.youtube.com/watch?v=pO6pNQLd-8M" class="lyt-playbtn"
@@ -235,14 +275,16 @@
                 </span>
               </a>
             </lite-youtube>
-            <p class="text-base font-sans bg-white py-4">Galicia. Esta joven banda fusiona ska, reggae y punk con ritmos bailables
+            <p class="text-base font-sans bg-white py-4 w-sm">Galicia. Esta joven banda fusiona ska, reggae y punk con ritmos bailables
             y letras comprometidas.</p>
               </details>
             </li>
             <li>
-              <span class="text-red-700 px-4 sm:px-2" datetime="21:45">21:45</span>
               <details class="w-full cursor-pointer">
-                <summary class="text-center w-full text-4xl hover:text-red-700 uppercase">Rebelión do inframundo</summary>
+                <summary class="flex text-center w-full text-4xl hover:text-red-700 uppercase items-center">
+                  <span class="text-5xl text-red-700 px-4 sm:px-2" datetime="21:45">21:45</span>
+                  <span class="ps-2 pe-10">Rebelión do inframundo</span>
+                </summary>
                 <lite-youtube videoid="RhOYGtbcdKk"
                 style="background-image: url('https://i.ytimg.com/vi/RhOYGtbcdKk/hqdefault.jpg');">
                 <a href="https://www.youtube.com/watch?v=RhOYGtbcdKk" class="lyt-playbtn"
@@ -253,15 +295,17 @@
                 </span>
               </a>
             </lite-youtube>
-            <p class="text-base font-sans bg-white py-4">Hip-hop combativo desde Ourense con bases potentes y letras afiladas que
+            <p class="text-base font-sans bg-white py-4 w-sm">Hip-hop combativo desde Ourense con bases potentes y letras afiladas que
             denuncian las injusticias sociales. Su directo se caracteriza por la intensidad
             y la conexión con el público.</p>
           </details>
             </li>
             <li>
-              <span class="text-red-700 px-4 sm:px-2" datetime="23:30">23:30</span>
               <details class="w-full cursor-pointer">
-                <summary class="text-center w-full text-4xl hover:text-red-700 uppercase">Koma</summary>
+                <summary class="flex text-center w-full text-4xl hover:text-red-700 uppercase items-center">
+                  <span class="text-5xl text-red-700 px-4 sm:px-2" datetime="23:30">23:30</span>
+                  <span class="ps-2 pe-10">Koma</span>
+                </summary>
                 <lite-youtube videoid="jt7C1JysZFw"
                 style="background-image: url('https://i.ytimg.com/vi/jt7C1JysZFw/hqdefault.jpg');">
                 <a href="https://www.youtube.com/watch?v=jt7C1JysZFw" class="lyt-playbtn"
@@ -271,15 +315,17 @@
                 </span>
               </a>
             </lite-youtube>
-            <p class="text-base font-sans bg-white py-4">Desde Navarra, una de las bandas más icónicas del metal punk estatal. Letras
+            <p class="text-base font-sans bg-white py-4 w-sm">Desde Navarra, una de las bandas más icónicas del metal punk estatal. Letras
             cargadas de ironía y crítica social, con una potente base de guitarras y una voz
             inconfundible que los ha convertido en una referencia de la música contundente.</p>
               </details>
             </li>
             <li>
-              <span class="text-red-700 px-4 sm:px-2" datetime="01:30">01:30</span>
               <details class="w-full cursor-pointer">
-                <summary class="text-center w-full text-4xl hover:text-red-700 uppercase">Kaos Urbano</summary>
+                <summary class="flex text-center w-full text-4xl hover:text-red-700 uppercase items-center">
+                  <span class="text-5xl text-red-700 px-4 sm:px-2" datetime="01:30">01:30</span>
+                  <span class="ps-2 pe-10">Kaos Urbano</span>
+                </summary>
                 <lite-youtube videoid="_DVl1aLwkCM"
                 style="background-image: url('https://i.ytimg.com/vi/_DVl1aLwkCM/hqdefault.jpg');">
                 <a href="https://www.youtube.com/watch?v=_DVl1aLwkCM" class="lyt-playbtn"
@@ -289,39 +335,108 @@
                 </span>
               </a>
             </lite-youtube>
-            <p class="text-base font-sans bg-white py-4">Punk oi! desde Madrid con más de dos décadas sobre los escenarios. Letras
+            <p class="text-base font-sans bg-white py-4 w-sm">Punk oi! desde Madrid con más de dos décadas sobre los escenarios. Letras
             combativas, actitud obrera y un directo que combina rabia y sentimiento,
             convirtiéndolos en una de las bandas más respetadas del género.</p>
               </details>
             </li>
-            <li>
-              <span class="text-red-700 px-4 sm:px-2" datetime="04:30">04:30</span>
-              <div class="w-full px-8">
+            <li class="flex justify-self-center">
+                <span class="px-4 sm:px-2 text-red-700 px-4 sm:px-2 text-4xl" datetime="04:30">04:30</span>
                 <p class="text-center w-full text-4xl">Fin del Festival</p>
-              </div>
             </li>
           </ul>
         </article>
       </section>
-      <section id="carousel-sponsors" class="section-sponsors flex flex-col mt-8 py-8 overflow-hidden rotate-2 mb-10">
-        <h2 class="carousel__title">Colaboradores</h2>
-        <div class="carousel carousel-top bg-strip-noise--black flex gap-6 py-3 justify-center items-center">
-          <img src="images/patrocinadores/deputacion_pontevedra.png" class="bg-white p-1" alt="">
-          <img src="images/patrocinadores/gadis.png" class="bg-white p-1" alt="">
-          <img src="images/patrocinadores/pirucho.png" class="bg-white p-1" alt="">
-          <!-- <img src="images/patrocinadores/xacobenet.jpg" width="200" class="bg-white p-1" alt=""> -->
-          <img src="images/patrocinadores/rodasa.png" class="bg-white p-1" alt="">
-          <img src="images/patrocinadores/sisvenpvc.png" class="bg-white p-1" alt="">
-          <img src="images/patrocinadores/xirela.png" class="bg-white p-1" alt="">
+      <section id="carousel-sponsors"
+        class="section-sponsors flex flex-col mt-8 py-8 overflow-hidden rotate-2 mb-10">
+        <h2 class="carousel__title">Colaboran</h2>
+        <div
+          class="splide carousel carousel-top bg-strip-noise--black flex gap-6 py-3 justify-center items-center">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"><img
+                  src="images/patrocinadores/deputacion_pontevedra.png"
+                  class="bg-white p-1" alt=""></li>
+              <li class="splide__slide"><img src="images/patrocinadores/gadis.png"
+                  class="bg-white p-1" alt=""></li>
+              <li class="splide__slide"><img src="images/patrocinadores/pirucho.png"
+                  class="bg-white p-1" alt=""></li>
+              <li class="splide__slide"><img src="images/patrocinadores/rodasa.png"
+                  class="bg-white p-1" alt=""></li>
+              <li class="splide__slide"><img src="images/patrocinadores/sisvenpvc.png"
+                  class="bg-white p-1" alt=""></li>
+              <li class="splide__slide"><img src="images/patrocinadores/xirela.png"
+                  class="bg-white p-1" alt=""></li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
     <footer class="footer">
-            www.arborock.com - 2014 - <span id="current-year"></span>
+      <div class="copyright">www.arborock.com - 2014 - <span id="current-year"></span></div>
     </footer>
   </div>
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+      new Splide('.splide-bands-top', {
+        type: 'loop',
+        perPage: 4,
+        focus: 'center',
+        autoScroll: {
+          speed: 2,
+        },
+        updateOnMove: true,
+        pagination: false,
+        padding: '10%',
+        breakpoints: {
+          1440: {
+            perPage: 1,
+            padding: '30%'
+          }
+        }
+      }).mount(window.splide.Extensions);
+
+      new Splide('.splide-bands-bottom', {
+        type: 'loop',
+        perPage: 4,
+        focus: 'center',
+        direction: 'rtl',
+        autoScroll: {
+          speed: 2,
+        },
+        updateOnMove: true,
+        pagination: false,
+        padding: '10%',
+        breakpoints: {
+          1440: {
+            perPage: 1,
+            padding: '30%'
+          }
+        }
+      }).mount(window.splide.Extensions);
+
+      new Splide('#carousel-sponsors .splide', {
+        type: 'loop',
+        perPage: 4,
+        focus: 'center',
+        autoScroll: {
+          speed: 2,
+        },
+        updateOnMove: true,
+        pagination: false,
+        padding: '10%',
+        breakpoints: {
+          1440: {
+            perPage: 1,
+            padding: '30%'
+          }
+        }
+      }).mount(window.splide.Extensions);
+    });
+
   </script>
 </body>
 
