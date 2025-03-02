@@ -85,13 +85,18 @@ img {
 }
 .section-title {
   width: 30rem;
+  display: flex;
 
   &::before {
-    content: attr(title);
-    color: white;
-    position: absolute;
-    top: 3rem;
-    padding-inline-start: 1rem;
+    content: "★";
+      display: block;
+      background-color: var(--red);
+      height: 5rem;
+      width: 7rem !important;
+      top: 0;
+      left: 0dvw;
+      position: relative;
+      color: white;
   }
 }
 .section-agenda__day {
@@ -100,8 +105,6 @@ img {
 
   .section-agenda__header {
     margin-bottom: 1rem;
-    position: sticky;
-    top: 1rem;
   }
   details {
     position: relative;
@@ -323,12 +326,14 @@ from { opacity: 1;}
   animation-range-end: 110dvh;
 }
 .to-invisible-animation {
-  will-change: transform;
-  opacity: 1;
-  animation: to-invisible;
-  animation-timeline: view();
-  animation-range-start: 80dvh;
-  animation-range-end: 110dvh;
+  @media screen and (max-width: 976px) {
+    will-change: transform;
+    opacity: 1;
+    animation: to-invisible;
+    animation-timeline: view();
+    animation-range-start: 80dvh;
+    animation-range-end: 110dvh;
+  }
 }
 .deco-lamprea-left,
 .deco-lamprea-right {
