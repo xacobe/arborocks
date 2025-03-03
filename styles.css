@@ -68,7 +68,6 @@ img {
   font-size: 4.8rem;
   text-transform: uppercase;
   font-family: anton;
-  color: white;
   z-index: 0;
   mix-blend-mode: darken;
   background:
@@ -89,14 +88,14 @@ img {
 
   &::before {
     content: "★";
-      display: block;
-      background-color: var(--red);
-      height: 5rem;
-      width: 7rem !important;
-      top: 0;
-      left: 0dvw;
-      position: relative;
-      color: white;
+    display: block;
+    background-color: var(--red);
+    height: 8rem;
+    width: 5rem;
+    top: 0;
+    left: 0dvw;
+    position: relative;
+    color: white;
   }
 }
 .section-agenda__day {
@@ -160,8 +159,9 @@ lite-youtube {
 .carousel__title {
   font-size: 3rem;
   font-family: anton;
-  padding-left: 4rem;
+  text-transform: uppercase;
   line-height: 0.8;
+  padding-left: 2rem;
   margin-bottom: 2rem;
 }
 .bg-strip-noise--black {
