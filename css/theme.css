@@ -1,0 +1,48 @@
+@keyframes lampring {
+
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, -200dvh);
+  }
+}
+
+.deco-lamprea-left,
+.deco-lamprea-right {
+  position: relative;
+  clip-path: margin-box;
+}
+
+.deco-lamprea-left::after,
+.deco-lamprea-right::after {
+  will-change: transform;
+  content: "";
+  display: none;
+  height: 300dvh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/lamprea.png");
+  width: 100%;
+  mix-blend-mode: hard-light;
+  background-size: contain;
+  background-repeat: repeat-y;
+  background-position: center;
+  animation: lampring linear;
+  animation-timeline: scroll();
+  animation-range: entry;
+}
+
+.deco-lamprea-left {
+  flex: 1 1 33%;
+  transform: rotate(180deg);
+
+  &::after { display: block;}
+}
+@media screen and (min-width: 620px) {
+  .deco-lamprea-right {
+    flex: 1 1 33%;
+    &::after { display: block;}
+  }
+}

@@ -1,0 +1,58 @@
+.header {
+  display: grid;
+  grid-auto-columns: max-content;
+  padding-top: 1rem;
+  justify-content: space-between;
+}
+.header__sidebar {
+  display: flex;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 130%;
+    width: 7.2rem;
+    background: url(images/sello.png) top left;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 8rem;
+  }
+
+  @media screen and (min-width: 720px) {
+    &::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 4rem;
+      background-image: url(images/deco-square.png);
+      background-repeat: no-repeat;
+      position: absolute;
+      background-position: 0 0;
+      right: -5rem;
+      background-size: 100%;
+      top: 3rem
+    }
+  }
+}
+
+.date-stamp {
+  text-align: right;
+  font-family: 'post_no_bills_colomboXBd';
+  font-size: clamp(2.8rem, 0.626rem + 9.275vw, 4.8rem);
+  text-transform: uppercase;
+  line-height: .8;
+
+  .date-stamp__year {
+    /* line-height: .7; */
+    font-size: 1.2em;
+    position: relative;
+    color: var(--red);
+    z-index: -1;
+  }
+}
+
+.section-tickets__content {
+  flex: 1 1 66%;
+}

@@ -1,0 +1,184 @@
+:root {
+  --red: #A00000;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@font-face {
+  font-family: 'post_no_bills_regular';
+  src: url('./fonts/postnobillscolombo-regular-webfont.eot');
+  src: url('./fonts/postnobillscolombo-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/postnobillscolombo-regular-webfont.woff2') format('woff2'),
+    url('./fonts/postnobillscolombo-regular-webfont.woff') format('woff'),
+    url('./fonts/postnobillscolombo-regular-webfont.ttf') format('truetype'),
+    url('./fonts/postnobillscolombo-regular-webfont.svg#post_no_bills_colomboregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'post_no_bills_bold';
+  src: url('./fonts/postnobillscolombo-bold-webfont.eot');
+  src: url('./fonts/postnobillscolombo-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/postnobillscolombo-bold-webfont.woff2') format('woff2'),
+    url('./fonts/postnobillscolombo-bold-webfont.woff') format('woff'),
+    url('./fonts/postnobillscolombo-bold-webfont.ttf') format('truetype'),
+    url('./fonts/postnobillscolombo-bold-webfont.svg#post_no_bills_colombobold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'post_no_bills_colomboXBd';
+  src: url('./fonts/postnobillscolombo-extrabold-webfont.eot');
+  src: url('./fonts/postnobillscolombo-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/postnobillscolombo-extrabold-webfont.woff2') format('woff2'),
+    url('./fonts/postnobillscolombo-extrabold-webfont.woff') format('woff'),
+    url('./fonts/postnobillscolombo-extrabold-webfont.ttf') format('truetype'),
+    url('./fonts/postnobillscolombo-extrabold-webfont.svg#post_no_bills_colomboXBd') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ff-anton { font-family: "Anton", serif;}
+.ff-post-regular { font-family: 'post_no_bills_regular';}
+.ff-post-bold { font-family: 'post_no_bills_bold';}
+.ff-post-extrabold { font-family: 'post_no_bills_colomboXBd';}
+
+/* Fonts */
+.stardos-stencil-regular {
+  font-family: "Stardos Stencil", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.stardos-stencil-bold {
+  font-family: "Stardos Stencil", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.bg-main {
+  background-image: url("../images/bg_noise-paper_center.png");
+  background-size: contain;
+}
+
+.bg-strips { background: repeating-linear-gradient(45deg, var(--red), var(--red) .8rem, white .8rem, white 1.6rem);}
+
+.bg-papernoise { background-image: url("../images/bg_some-noise.png");}
+
+.bg-papernoise--black { background-image: url("../images/bg_some-noise--dark.png");}
+
+.container {
+  max-width: calc(1080px + 4rem);
+  margin-inline: auto;
+}
+.w-100 { width: 100%; }
+.vh-100 { height: 100dvh;}
+.btn {
+  color: white;
+  text-transform: uppercase;
+  padding: .8rem 2rem;
+  width: max-content;
+}
+.btn-xl { font-size: 2rem;}
+.btn-primary {
+  background-color: var(--red);
+  position: relative;
+
+  &:hover {
+    background-color: red;
+  }
+}
+lite-youtube {
+  margin-block-start: 1rem;
+}
+.splide__slide {
+  align-self: center;
+}
+.carousel__title {
+  font-size: 3rem;
+  font-family: anton;
+  text-transform: uppercase;
+  line-height: 0.8;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+.bg-strip-noise--black {
+  background-image: url("../images/bg_some-noise--dark.png");
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1rem;
+    background: repeating-linear-gradient(45deg, var(--red), var(--red) .8rem, white .8rem, white 1.6rem);
+    position: absolute;
+  }
+
+  &:before {
+    top: -1.5rem;
+  }
+
+  &:after {
+    bottom: -1.5rem;
+  }
+}
+.section-agenda__day {
+  li {
+    border-bottom: dashed 2px;
+    padding-block: 0.6rem;
+  }
+}
+
+/* Animations */
+@keyframes to-color {
+  0% {
+    filter: grayscale(1);
+  }
+  50% {
+    filter: grayscale(0);
+  }
+  0% {
+    filter: grayscale(1);
+  }
+}
+
+@keyframes to-invisible {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.to-color-animation {
+  will-change: transform;
+  filter: grayscale(1);
+  animation: to-color;
+  animation-timeline: view();
+  animation-range: entry;
+  animation-range-start: 50dvh;
+  animation-range-end: 110dvh;
+}
+
+.to-invisible-animation {
+  @media screen and (max-width: 976px) {
+    will-change: transform;
+    opacity: 1;
+    animation: to-invisible;
+    animation-timeline: view();
+    animation-range-start: 80dvh;
+    animation-range-end: 110dvh;
+  }
+}
